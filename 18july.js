@@ -183,35 +183,3 @@
 // }
 
 // console.log(temp)
-function allpalpartitions(input){
-    let n = input.length
-    let allpart = [];
-    let currpart = [];
-    allpalpartitionsUTIL(allpart,currpart,0,n ,input);
-    // for(let i =0 ;i< allpart.length;i++){
-    //     console.log(allpart[i]);
-    // }
-    console.log(allpart);
-}
-function allpalpartitionsUTIL(allpart,currpart,start,n ,input){
-    if(start >= n){
-        allpart.push(currpart.slice());
-        currpart.pop();
-        return ;
-    }
-    for(let i= start ; i< n ;i++){
-        if(ispalindrome(input, start ,i)){
-            currpart.push(input.substring(start,i+1-start));
-            allpalpartitionsUTIL(allpart ,currpart,i+1,n ,input)
-        }
-    }
-}
-function ispalindrome(input ,start ,i){
-    while(i >= start){
-        if(input[start] != input[i]){
-            return false;
-        }
-        return true;
-   }
-}
-allpalpartitions("geeks");
