@@ -1,8 +1,9 @@
+
 {
   "development": {
     "username": "root",
-    "password":"give your password",
-    "database": "STUDENTS",
+    "password": "Enter Your Password",
+    "database": "ecommerce",
     "host": "localhost",
     "dialect": "mysql"
   },
